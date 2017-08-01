@@ -1,0 +1,15 @@
+[alias]
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[include]
+path = ~/.gitconfig.local
+
+[core]
+editor = nvim
+
+[color]
+ui = auto
+
+[ghq]
+root = ~/ghq
