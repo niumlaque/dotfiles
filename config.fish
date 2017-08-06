@@ -12,7 +12,7 @@ if test -e ~/.config/fish/config.local.fish
 end
 
 # ls color 反映
-if test -e ~/.dircolors
+if begin command --search dircolors >/dev/null; and test -e ~/.dircolors; end
     eval (dircolors -c ~/.dircolors)
 end
 
