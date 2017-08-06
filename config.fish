@@ -49,11 +49,22 @@ function wttr
 end
 
 # alias
-alias ls "ls --color"
-alias la "ls --color -a"
-alias lf "ls --color -F"
-alias ll "ls --color -l"
-alias lla "ls --color -la"
+switch $OSTYPE
+case "Linux"
+    alias ls "ls --color"
+    alias la "ls --color -a"
+    alias lf "ls --color -F"
+    alias ll "ls --color -l"
+    alias lla "ls --color -la"
+    alias lr "less -R"
+    alias fp "readlink -f"
+case "Darwin"
+    alias ls "ls -G"
+    alias la "ls -Ga"
+    alias lf "ls -GF"
+    alias ll "ls -Gl"
+    alias lla "ls -Gla"
+end
 alias du "du -h"
 alias df "df -h"
 alias su "su -l"
@@ -61,9 +72,7 @@ alias remake "make clean;make"
 alias dvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolution=high --show-reachable=yes 2>&1"
 alias dcvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolution=high --show-reachable=yes --trace-children=yes 2>&1"
 alias today "date +'%Y%m%d'"
-alias lr "less -R"
 alias vcp "rsync -av --progress"
-alias fp "readlink -f"
 if test -e /usr/local/bin/nvim
     alias vi "/usr/local/bin/nvim"
 end
