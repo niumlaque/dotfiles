@@ -1,4 +1,5 @@
 # environments
+set -x OSTYPE (uname -s)
 if command --search go >/dev/null
     set -x GOPATH ~/develop/golang
     set -x GOBIN ~/develop/golang/bin
