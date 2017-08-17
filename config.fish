@@ -48,43 +48,24 @@ function wttr
     curl (string join "" "wttr.in/" $argv)
 end
 
-function _sjoin
-    set -l argc (count $argv)
-    if test $argc -lt 1
-        echo -n ""
-        return 
-    end
-
-    if test $argc -eq 1
-        echo -n $arv[1]
-        return
-    end
-
-    set -l sep ""
-    for x in $argv[2..-1]
-        echo -n $sep$x
-        set -l sep $argv[1]
-    end
-end
-
-function _squote
-    for x in $argv
-        echo "\""$x"\""
-    end
-end
-
 function dgrep
     set -l argc (count $argv)
-    if test $argc -eq 0
+
+    if test $argc -gt 1
+        set -l sep "-name "
+        set -l ext ""
+        for x in $argv[2..-1]
+            set ext $ext$sep"\"*.$x\""
+            set -l sep " -o -name "
+        end
+
+        grep -n --color $argv[1] (eval "find" $ext)
         return
     end
 
     if test $argc -eq 1
-        # TODO
-    else
-        set -l cmd "find . -name "(_sjoin " -o -name " (_squote $argv[2..-1]))
-        set -l files (eval $cmd)
-        grep -n --color $argv[1] $files
+        grep -n --color $argv[1] (eval "find")
+        return
     end
 end
 
