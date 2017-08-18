@@ -59,12 +59,18 @@ function dgrep
             set -l sep " -o -name "
         end
 
-        grep -n --color $argv[1] (eval "find" $ext)
+        set -l files (eval "find" $ext)
+        if test (count $files) -ne 0
+            grep -n --color $argv[1] $files
+        end
         return
     end
 
     if test $argc -eq 1
-        grep -n --color $argv[1] (eval "find")
+        set -l files (eval "find")
+        if test (count $files) -ne 0
+            grep -n --color $argv[1] $files
+        end
         return
     end
 end
