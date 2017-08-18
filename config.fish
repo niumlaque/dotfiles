@@ -51,6 +51,18 @@ end
 
 function dgrep
     set -l argc (count $argv)
+    set -l pecoreq 0
+    if test $argc -gt 0
+        if [ $argv[1] = "-l" ]
+            if test $argc -eq 1
+                return
+            end
+
+            set pecoreq 1
+            set argv $argv[2..-1]
+            set argc (count $argv)
+        end
+    end
 
     if test $argc -gt 1
         set -l sep "-name "
@@ -62,7 +74,14 @@ function dgrep
 
         set -l files (eval "find -type f" $ext)
         if test (count $files) -ne 0
-            grep -n --color $argv[1] $files
+            if test $pecoreq -eq 1
+                grep -n --color $argv[1] $files | peco | awk -F: '{print $1 " -c " $2}' | read target -l
+                if [ -z != $target ]
+                    eval $DEFAULT_EDITOR $target
+                end
+            else
+                grep -n --color $argv[1] $files
+            end
         end
         return
     end
@@ -70,7 +89,14 @@ function dgrep
     if test $argc -eq 1
         set -l files (eval "find -type f")
         if test (count $files) -ne 0
-            grep -n --color $argv[1] $files
+            if test $pecoreq -eq 1
+                grep -n --color $argv[1] $files | peco | awk -F: '{print $1 " -c " $2}' | read target -l
+                if [ -z != $target ]
+                    eval $DEFAULT_EDITOR $target
+                end
+            else
+                grep -n --color $argv[1] $files
+            end
         end
         return
     end
