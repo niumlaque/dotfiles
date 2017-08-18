@@ -1,4 +1,5 @@
 # environments
+set -x DEFAULT_EDITOR "/usr/local/bin/nvim"
 set -x OSTYPE (uname -s)
 if command --search go >/dev/null
     set -x GOPATH ~/develop/golang
@@ -100,8 +101,8 @@ alias dvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolutio
 alias dcvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolution=high --show-reachable=yes --trace-children=yes 2>&1"
 alias today "date +'%Y%m%d'"
 alias vcp "rsync -av --progress"
-if test -e /usr/local/bin/nvim
-    alias vi "/usr/local/bin/nvim"
+if test -e $DEFAULT_EDITOR
+    alias vi $DEFAULT_EDITOR
 end
 if command --search peco >/dev/null
     alias peco "peco --layout=bottom-up"
