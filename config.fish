@@ -75,7 +75,7 @@ function dgrep
         set -l files (eval "find -type f" $ext)
         if test (count $files) -ne 0
             if test $pecoreq -eq 1
-                grep -n --color $argv[1] $files | peco | awk -F: '{print $1 " -c " $2}' | read target -l
+                grep -n --color $argv[1] $files | peco | xargs -IFiles echo Files | awk -F: '{print $1 " -c " $2}' | xargs echo -n | read -z target -l
                 if [ -z != $target ]
                     eval $DEFAULT_EDITOR $target
                 end
@@ -90,7 +90,7 @@ function dgrep
         set -l files (eval "find -type f")
         if test (count $files) -ne 0
             if test $pecoreq -eq 1
-                grep -n --color $argv[1] $files | peco | awk -F: '{print $1 " -c " $2}' | read target -l
+                grep -n --color $argv[1] $files | peco | xargs -IFiles echo Files | awk -F: '{print $1 " -c " $2}' | xargs echo -n | read -z target -l
                 if [ -z != $target ]
                     eval $DEFAULT_EDITOR $target
                 end
