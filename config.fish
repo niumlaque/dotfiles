@@ -103,3 +103,6 @@ alias vcp "rsync -av --progress"
 if test -e /usr/local/bin/nvim
     alias vi "/usr/local/bin/nvim"
 end
+if command --search peco >/dev/null
+    alias peco "peco --layout=bottom-up"
+end
