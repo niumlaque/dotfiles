@@ -112,6 +112,10 @@ case "Linux"
     alias lla "ls --color -la"
     alias lr "less -R"
     alias fp "readlink -f"
+    if command --search xsel >/dev/null
+        alias cbc "xsel --clipboard --input"
+        alias cbp "xsel --clipboard --output"
+    end
 case "Darwin"
     alias ls "ls -G"
     alias la "ls -Ga"
