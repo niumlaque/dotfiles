@@ -102,6 +102,43 @@ function dgrep
     end
 end
 
+function dfind
+    set -l argc (count $argv)
+    set -l pecoreq 0
+    if test $argc -gt 0
+        if [ $argv[1] = "-l" ]
+            if test $argc -eq 1
+                return
+            end
+
+            set pecoreq 1
+            set argv $argv[2..-1]
+            set argc (count $argv)
+        end
+    end
+
+    if test $argc -gt 0
+        set -l sep "-name "
+        set -l ext ""
+        for x in $argv[1..-1]
+            set ext $ext$sep"\"$x\""
+            set -l sep " -o -name "
+        end
+
+        set -l files (eval "find -type f" $ext)
+        if test (count $files) -ne 0
+            if test $pecoreq -eq 1
+                eval "find -type f" $ext | peco | xargs echo -n | read -z target -l
+                if [ -z != $target ]
+                    eval $DEFAULT_EDITOR $target
+                end
+            else
+                echo $files
+            end
+        end
+    end
+end
+
 # alias
 switch $OSTYPE
 case "Linux"
