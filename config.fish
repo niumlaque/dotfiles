@@ -39,9 +39,10 @@ function fish_right_prompt
     echo (set_color -u 555)(date "+%H:%M:%S")(set_color normal)" "
 end
 
-# コマンド実行履歴
+# キーバインド設定
 function fish_user_key_bindings
     bind \cr 'peco_select_history (commandline -b)'
+    bind \cx 'recentdir'
 end
 
 # 天気 :p
@@ -136,6 +137,13 @@ function dfind
                 echo $files
             end
         end
+    end
+end
+
+function recentdir
+    z -l | peco | awk '{ print $2 }' | read -l target
+    if [ -z != $target ]
+        commandline -i $target
     end
 end
 
