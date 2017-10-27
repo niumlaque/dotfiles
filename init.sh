@@ -19,7 +19,6 @@ sudo aptitude -y install \
     fonts-inconsolata \
     python3-pip \
     sshfs \
-    reptyr \
     valgrind \
     peco \
     curl \
