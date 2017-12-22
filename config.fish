@@ -148,6 +148,13 @@ function recentdir
     end
 end
 
+function gcd
+    ghq list | peco | read -l target
+    if [ -z != $target ]
+        cd (ghq root)/$target
+    end
+end
+
 # alias
 switch $OSTYPE
 case "Linux"
