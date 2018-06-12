@@ -23,7 +23,8 @@ sudo aptitude -y install \
     peco \
     curl \
     virtualenv \
-    arc-theme
+    arc-theme \
+    neovim
 
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
 

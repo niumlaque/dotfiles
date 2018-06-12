@@ -1,5 +1,5 @@
 # environments
-set -x DEFAULT_EDITOR "/usr/local/bin/nvim"
+set -x DEFAULT_EDITOR "/usr/bin/nvim"
 set -x OSTYPE (uname -s)
 set -x XDG_CONFIG_PATH $HOME/.config
 if command --search go >/dev/null
