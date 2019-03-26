@@ -27,7 +27,7 @@ function fish_prompt
     else
         set path (string split -- / $PWD)[-1]
     end
-    echo -n [$USERNAME@(hostname) $path]"\$ "
+    echo -n "[@"(hostname) $path"]\$ "
 end
 
 # prompt (右)
