@@ -30,5 +30,5 @@ mkdir -p ~/develop/golang
 export GOPATH=~/develop/golang
 go get github.com/motemen/ghq
 
-fish -c "fisher add z"
-fish -c "fisher add omf/plugin-peco"
+fish -c "fisher add jethrokuan/z"
+fish -c "fisher add oh-my-fish/plugin-peco"
