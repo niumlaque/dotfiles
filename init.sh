@@ -11,9 +11,7 @@ sudo aptitude -y install \
     tmux \
     golang \
     g++ \
-    clang-3.9 \
     extundelete \
-    clang-format-3.9 \
     tig \
     global \
     fonts-inconsolata \
@@ -39,5 +37,5 @@ mkdir -p ~/develop/python3
 export GOPATH=~/develop/golang
 go get github.com/motemen/ghq
 
-fish -c "fisher install z"
-fish -c "fisher install omf/plugin-peco"
+fish -c "fisher add jethrokuan/z"
+fish -c "fisher add oh-my-fish/plugin-peco"
