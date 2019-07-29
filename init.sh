@@ -20,8 +20,6 @@ sudo aptitude -y install \
     valgrind \
     peco \
     curl \
-    virtualenv \
-    arc-theme \
     neovim
 
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
