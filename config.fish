@@ -190,3 +190,7 @@ end
 if command --search peco >/dev/null
     alias peco "peco --layout=bottom-up"
 end
+if command --search curl >/dev/null
+    alias corona "curl -s https://corona-stats.online"
+    alias coronaj "curl -s https://corona-stats.online/Japan"
+end
