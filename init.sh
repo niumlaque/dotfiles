@@ -37,3 +37,4 @@ go get github.com/motemen/ghq
 
 fish -c "fisher add jethrokuan/z"
 fish -c "fisher add oh-my-fish/plugin-peco"
+fish -c "fisher add jorgebucaran/fish-nvm"
