@@ -9,32 +9,26 @@ sudo aptitude -y safe-upgrade
 sudo aptitude -y install \
     fish \
     tmux \
-    golang \
     g++ \
     extundelete \
     tig \
     global \
     fonts-inconsolata \
-    python3-pip \
     sshfs \
     valgrind \
     peco \
     curl \
     neovim
 
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
 ln -s $CURDIR/.gitconfig ~/.gitconfig
 ln -s $CURDIR/.tmux.conf ~/.tmux.conf
 ln -s $CURDIR/.dircolors ~/.dircolors
 
-mkdir -p ~/develop/golang
-mkdir -p ~/develop/python3
+git clone https://github.com/syndbg/goenv.git ~/.goenv
+mkdir -p ~/develop
 
-export GOPATH=~/develop/golang
-go get github.com/motemen/ghq
-
-fish -c "fisher add jethrokuan/z"
-fish -c "fisher add oh-my-fish/plugin-peco"
-fish -c "fisher add jorgebucaran/fish-nvm"
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fish -c "fisher install jethrokuan/z"
+fish -c "fisher install oh-my-fish/plugin-peco"
+fish -c "fisher install edc/bass"

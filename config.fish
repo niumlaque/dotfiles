@@ -8,6 +8,10 @@ if command --search go >/dev/null
     set -x PATH $GOPATH/bin $PATH
 end
 
+set -x GOENV_ROOT ~/.goenv
+set -x PATH $GOENV_ROOT/bin $PATH
+eval (goenv init -|source)
+
 # ローカルファイル取り込み
 if test -e ~/.config/fish/config.local.fish
     source ~/.config/fish/config.local.fish
@@ -153,6 +157,10 @@ function gcd
     if [ -z != $target ]
         cd (ghq root)/$target
     end
+end
+
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
 
 # alias
