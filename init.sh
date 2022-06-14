@@ -18,7 +18,8 @@ sudo aptitude -y install \
     valgrind \
     peco \
     curl \
-    neovim
+    neovim \
+    gron
 
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
 ln -s $CURDIR/.gitconfig ~/.gitconfig
