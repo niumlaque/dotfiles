@@ -7,10 +7,12 @@ sudo apt-get update
 sudo apt-get install -y aptitude
 sudo aptitude -y safe-upgrade
 sudo aptitude -y install \
+    build-essential \
     fish \
     tmux \
     g++ \
     extundelete \
+    git \
     tig \
     global \
     fonts-inconsolata \
@@ -19,7 +21,8 @@ sudo aptitude -y install \
     peco \
     curl \
     neovim \
-    gron
+    gron \
+    rust-gdb
 
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
 ln -s $CURDIR/.gitconfig ~/.gitconfig

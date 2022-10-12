@@ -5,7 +5,7 @@ set -x XDG_CONFIG_PATH $HOME/.config
 if command --search go >/dev/null
     set -x GOPATH ~/develop/golang
     set -x GOBIN ~/develop/golang/bin
-    set -x PATH $GOPATH/bin $PATH
+    set -x PATH ~/.local/bin $GOPATH/bin $PATH
 end
 
 set -x GOENV_ROOT ~/.goenv
@@ -31,7 +31,7 @@ function fish_prompt
     else
         set path (string split -- / $PWD)[-1]
     end
-    echo -n [$USERNAME@(hostname) $path]"\$ "
+    echo -n [$USER $path]"\$ "
 end
 
 # prompt (右)
