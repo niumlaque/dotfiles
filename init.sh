@@ -36,3 +36,5 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fish -c "fisher install jethrokuan/z"
 fish -c "fisher install oh-my-fish/plugin-peco"
 fish -c "fisher install edc/bass"
+
+curl https://get.volta.sh | bash
