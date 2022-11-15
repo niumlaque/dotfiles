@@ -1,0 +1,13 @@
+{
+    "window.restoreWindows": "none",
+    "editor.formatOnSave": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.occurrencesHighlight": false,
+    "vim.wrapscan": false,
+    "vim.ignorecase": false,
+    "vim.searchHighlightColor": "#aa3",
+    "vim.searchMatchColor": "#aa3",
+    "vim.hlsearch": true,
+    "editor.minimap.enabled": false
+}
