@@ -152,7 +152,7 @@
         "command": "-workbench.action.focusSideBar"
     },
     {
-        "key": "ctrl+0",
+        "key": "ctrl+b 0",
         "command": "workbench.action.showAllEditors"
     },
     {
