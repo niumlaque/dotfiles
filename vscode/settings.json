@@ -19,4 +19,7 @@
     },
     "rust-analyzer.hover.actions.gotoTypeDef.enable": false,
     "files.eol": "\n",
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#666",
+    },
 }
