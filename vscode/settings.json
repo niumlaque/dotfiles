@@ -22,4 +22,6 @@
     "workbench.colorCustomizations": {
         "tab.activeBackground": "#666",
     },
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
 }
