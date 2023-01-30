@@ -6,3 +6,4 @@ call code --install-extension bungcip.better-toml
 call code --install-extension ritwickdey.liveserver
 call code --install-extension golang.go
 call code --install-extension premparihar.gotestexplorer
+call code --install-extension bierner.markdown-preview-github-styles
