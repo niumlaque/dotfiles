@@ -15,7 +15,7 @@ sudo aptitude -y install \
     git \
     tig \
     global \
-    fonts-inconsolata \
+    fonts-ricty-diminished \
     sshfs \
     valgrind \
     peco \
