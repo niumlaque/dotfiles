@@ -11,6 +11,7 @@ end
 set -x GOENV_ROOT ~/.goenv
 set -x PATH $GOENV_ROOT/bin $PATH
 eval (goenv init -|source)
+set -x PATH $GOPATH/bin $PATH
 
 # ローカルファイル取り込み
 if test -e ~/.config/fish/config.local.fish
