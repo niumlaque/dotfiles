@@ -25,4 +25,5 @@
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
     "markdown-preview-github-styles.colorTheme": "light",
+    "editor.fontFamily": "'Ricty Diminished'",
 }
