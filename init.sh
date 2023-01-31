@@ -15,7 +15,6 @@ sudo aptitude -y install \
     git \
     tig \
     global \
-    fonts-ricty-diminished \
     sshfs \
     valgrind \
     peco \
@@ -40,6 +39,8 @@ fish -c "fisher install edc/bass"
 curl https://get.volta.sh | bash
 
 echo "===================================================================>>"
+echo "Get font from https://github.com/yuru7/HackGen/releases"
+echo "unzip HackGen_NF_v*.*.*.zip && mv HackGen_NV_v*.*.* /usr/share/fonts/HackGenNerd"
 echo "goenv install -l && goenv install <VERSION> && goenv global <VERSION>"
 echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 echo "install VSCode"
