@@ -38,3 +38,13 @@ fish -c "fisher install oh-my-fish/plugin-peco"
 fish -c "fisher install edc/bass"
 
 curl https://get.volta.sh | bash
+
+echo "===================================================================>>"
+echo "goenv install -l && goenv install <VERSION> && goenv global <VERSION>"
+echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+echo "install VSCode"
+echo "$CURDIR/vscode/install_vscode_extensions.sh"
+echo "ln -s $CURDIR/vscode/keybindings.json ~/.config/Code/user/keybindings.json"
+echo "ln -s $CURDIR/vscode/settings.json ~/.config/Code/user/settings.json"
+echo "<<==================================================================="
+

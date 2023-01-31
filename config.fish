@@ -2,11 +2,6 @@
 set -x DEFAULT_EDITOR "/usr/bin/nvim"
 set -x OSTYPE (uname -s)
 set -x XDG_CONFIG_PATH $HOME/.config
-if command --search go >/dev/null
-    set -x GOPATH ~/develop/golang
-    set -x GOBIN ~/develop/golang/bin
-    set -x PATH ~/.local/bin $GOPATH/bin $PATH
-end
 
 set -x GOENV_ROOT ~/.goenv
 set -x PATH $GOENV_ROOT/bin $PATH
