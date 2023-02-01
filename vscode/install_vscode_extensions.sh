@@ -10,6 +10,7 @@ pkglist=(
     golang.go
     premparihar.gotestexplorer
     bierner.markdown-preview-github-styles
+    humao.rest-client
 )
 
 for i in ${pkglist[@]}; do
