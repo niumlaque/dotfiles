@@ -26,4 +26,5 @@
     "vim.visualstar": true,
     "markdown-preview-github-styles.colorTheme": "light",
     "editor.fontFamily": "'HackGen Console NFJ'",
+    "workbench.colorTheme": "Dark (Molokai)",
 }
