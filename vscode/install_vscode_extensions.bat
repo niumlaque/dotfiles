@@ -8,4 +8,4 @@ call code --install-extension golang.go
 call code --install-extension premparihar.gotestexplorer
 call code --install-extension bierner.markdown-preview-github-styles
 call code --install-extension humao.rest-client
-call code --install-extension nonylene.dark-molokai-theme
+call code --install-extension github.github-vscode-theme

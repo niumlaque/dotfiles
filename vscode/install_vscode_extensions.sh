@@ -11,7 +11,7 @@ pkglist=(
     premparihar.gotestexplorer
     bierner.markdown-preview-github-styles
     humao.rest-client
-    nonylene.dark-molokai-theme
+    github.github-vscode-theme
 )
 
 for i in ${pkglist[@]}; do

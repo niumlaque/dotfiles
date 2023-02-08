@@ -26,7 +26,7 @@
     "vim.visualstar": true,
     "markdown-preview-github-styles.colorTheme": "light",
     "editor.fontFamily": "'HackGen Console NFJ'",
-    "workbench.colorTheme": "Dark (Molokai)",
+    "workbench.colorTheme": "GitHub Dark Default",
     "rust-analyzer.lens.run.enable": false,
     "rust-analyzer.lens.debug.enable": false,
 }
