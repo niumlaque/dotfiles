@@ -7,6 +7,7 @@ sudo apt-get update
 sudo apt-get install -y aptitude
 sudo aptitude -y safe-upgrade
 sudo aptitude -y install \
+    terminator \
     build-essential \
     fish \
     tmux \
@@ -23,6 +24,7 @@ sudo aptitude -y install \
     gron \
     rust-gdb
 
+mkdir -p ~/.config/fish
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
 ln -s $CURDIR/.gitconfig ~/.gitconfig
 ln -s $CURDIR/.tmux.conf ~/.tmux.conf
