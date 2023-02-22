@@ -30,4 +30,28 @@
     "rust-analyzer.lens.run.enable": false,
     "rust-analyzer.lens.debug.enable": false,
     "update.showReleaseNotes": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        }
+    ],
 }
