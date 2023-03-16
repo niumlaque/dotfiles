@@ -229,5 +229,9 @@
         "key": "ctrl+k ctrl+shift+oem_5",
         "command": "-workbench.action.joinEditorInGroup",
         "when": "sideBySideEditorActive"
+    },
+    {
+        "key": "ctrl+b x",
+        "command": "workbench.action.closeActiveEditor"
     }
 ]
