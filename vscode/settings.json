@@ -50,5 +50,6 @@
       ]
     }
   ],
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "vim.foldfix": true
 }
