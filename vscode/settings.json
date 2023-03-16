@@ -51,5 +51,8 @@
     }
   ],
   "git.openRepositoryInParentFolders": "never",
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "prettier.tabWidth": 4,
+  "liveServer.settings.donotShowInfoMsg": true
 }
