@@ -38,8 +38,9 @@
         "command": "workbench.action.openPreviousRecentlyUsedEditor"
     },
     {
-        "key": "ctrl+b x",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "ctrl+w q",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "activeEditorCanSplitInGroup"
     },
     {
         "key": "ctrl+w",
@@ -83,12 +84,9 @@
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+w q",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
         "key": "ctrl+w left",
-        "command": "workbench.action.focusLeftGroup"
+        "command": "workbench.action.focusLeftGroup",
+        "when": "activeEditorCanSplitInGroup"
     },
     {
         "key": "ctrl+k ctrl+left",
@@ -96,7 +94,8 @@
     },
     {
         "key": "ctrl+w right",
-        "command": "workbench.action.focusRightGroup"
+        "command": "workbench.action.focusRightGroup",
+        "when": "activeEditorCanSplitInGroup"
     },
     {
         "key": "ctrl+k ctrl+right",
@@ -116,10 +115,6 @@
         "command": "workbench.action.previousEditor"
     },
     {
-        "key": "ctrl+w v",
-        "command": "workbench.action.splitEditor"
-    },
-    {
         "key": "ctrl+oem_5",
         "command": "-workbench.action.splitEditor"
     },
@@ -132,8 +127,9 @@
         "command": "-workbench.action.splitEditorOrthogonal"
     },
     {
-        "key": "ctrl+w up",
-        "command": "workbench.action.focusAboveGroup"
+        "key": "ctrl+w k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "activeEditorCanSplitInGroup"
     },
     {
         "key": "ctrl+k ctrl+up",
@@ -141,7 +137,8 @@
     },
     {
         "key": "ctrl+w down",
-        "command": "workbench.action.focusBelowGroup"
+        "command": "workbench.action.focusBelowGroup",
+        "when": "activeEditorCanSplitInGroup"
     },
     {
         "key": "ctrl+k ctrl+down",
@@ -168,5 +165,69 @@
         "key": "ctrl+shift+oem_3",
         "command": "-workbench.action.terminal.new",
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+oem_5",
+        "command": "-workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusFirstSideEditor",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusFirstSideEditor",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w right",
+        "command": "workbench.action.focusSecondSideEditor",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusSecondSideEditor",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w left",
+        "command": "workbench.action.focusFirstSideEditor",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+w q",
+        "command": "workbench.action.joinEditorInGroup",
+        "when": "!activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+oem_5",
+        "command": "-workbench.action.joinEditorInGroup",
+        "when": "sideBySideEditorActive"
     }
 ]

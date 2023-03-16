@@ -1,57 +1,54 @@
 {
-    "window.restoreWindows": "none",
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.occurrencesHighlight": false,
-    "vim.wrapscan": false,
-    "vim.ignorecase": false,
-    "vim.searchHighlightColor": "#aa3",
-    "vim.searchMatchColor": "#aa3",
-    "vim.hlsearch": true,
-    "editor.minimap.enabled": false,
-    "rust-analyzer.inlayHints.chainingHints": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.lens.implementations.enable": false,
-    "editor.formatOnSave": true,
-    "[rust]": {
-        "editor.formatOnSave": true,
-    },
-    "rust-analyzer.hover.actions.gotoTypeDef.enable": false,
-    "files.eol": "\n",
-    "workbench.colorCustomizations": {
-        "tab.activeBackground": "#666",
-    },
-    "vim.useSystemClipboard": true,
-    "vim.visualstar": true,
-    "markdown-preview-github-styles.colorTheme": "light",
-    "editor.fontFamily": "'HackGen Console NFJ'",
-    "workbench.colorTheme": "GitHub Dark Default",
-    "rust-analyzer.lens.run.enable": false,
-    "rust-analyzer.lens.debug.enable": false,
-    "update.showReleaseNotes": false,
-    "vim.normalModeKeyBindingsNonRecursive": [
+  "window.restoreWindows": "none",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.occurrencesHighlight": false,
+  "vim.wrapscan": false,
+  "vim.ignorecase": false,
+  "vim.searchHighlightColor": "#aa3",
+  "vim.searchMatchColor": "#aa3",
+  "vim.hlsearch": true,
+  "editor.minimap.enabled": false,
+  "rust-analyzer.inlayHints.chainingHints": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.lens.implementations.enable": false,
+  "editor.formatOnSave": true,
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.hover.actions.gotoTypeDef.enable": false,
+  "files.eol": "\n",
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#666"
+  },
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "markdown-preview-github-styles.colorTheme": "light",
+  "editor.fontFamily": "'HackGen Console NFJ'",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "rust-analyzer.lens.run.enable": false,
+  "rust-analyzer.lens.debug.enable": false,
+  "update.showReleaseNotes": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
         {
-            "before": [
-                "u"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "undo"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-r>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "redo"
-                }
-            ]
+          "command": "undo"
         }
-    ],
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
+    }
+  ],
+  "git.openRepositoryInParentFolders": "never"
 }
