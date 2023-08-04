@@ -32,7 +32,9 @@
   "update.showReleaseNotes": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["u"],
+      "before": [
+        "u"
+      ],
       "after": [],
       "commands": [
         {
@@ -41,7 +43,9 @@
       ]
     },
     {
-      "before": ["<C-r>"],
+      "before": [
+        "<C-r>"
+      ],
       "after": [],
       "commands": [
         {
