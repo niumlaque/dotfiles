@@ -233,5 +233,10 @@
     {
         "key": "ctrl+b x",
         "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+shift+space",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
     }
 ]
