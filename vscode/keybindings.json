@@ -238,5 +238,10 @@
         "key": "ctrl+shift+space",
         "command": "-editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+[Quote]",
+        "command": "-breadcrumbs.focus",
+        "when": "breadcrumbsPossible && breadcrumbsVisible"
     }
 ]
