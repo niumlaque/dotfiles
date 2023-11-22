@@ -58,5 +58,6 @@
   "vim.foldfix": true,
   "liveServer.settings.donotVerifyTags": true,
   "prettier.tabWidth": 4,
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.startupEditor": "none"
 }
