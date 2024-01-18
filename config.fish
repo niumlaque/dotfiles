@@ -3,10 +3,12 @@ set -x DEFAULT_EDITOR "/usr/bin/nvim"
 set -x OSTYPE (uname -s)
 set -x XDG_CONFIG_PATH $HOME/.config
 
-set -x GOENV_ROOT ~/.goenv
-set -x PATH $GOENV_ROOT/bin $PATH
-eval (goenv init -|source)
-set -x PATH $GOPATH/bin $PATH
+if command --search goenv >/dev/null
+    set -x GOENV_ROOT ~/.goenv
+    set -x PATH $GOENV_ROOT/bin $PATH
+    eval (goenv init -|source)
+    set -x PATH $GOPATH/bin $PATH
+end
 
 # ローカルファイル取り込み
 if test -e ~/.config/fish/config.local.fish
