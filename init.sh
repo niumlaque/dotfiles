@@ -33,7 +33,7 @@ ln -s $CURDIR/.dircolors ~/.dircolors
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 mkdir -p ~/develop
 
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/4.4.4/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install jethrokuan/z"
 fish -c "fisher install oh-my-fish/plugin-peco"
 fish -c "fisher install edc/bass"
