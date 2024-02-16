@@ -22,7 +22,8 @@ sudo aptitude -y install \
     curl \
     neovim \
     gron \
-    rust-gdb
+    rust-gdb \
+    gpg
 
 mkdir -p ~/.config/fish
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
@@ -47,6 +48,10 @@ echo "unzip HackGen_NF_v2.9.0.zip && sudo mv HackGen_NF_v2.9.0 /usr/share/fonts/
 echo "goenv install -l && goenv install <VERSION> && goenv global <VERSION>"
 echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 echo "install VSCode"
+echo "wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg"
+echo "sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg"
+echo "sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'"
+echo "rm -f packages.microsoft.gpg"
 echo "$CURDIR/vscode/install_vscode_extensions.sh"
 echo "ln -s $CURDIR/vscode/keybindings.json ~/.config/Code/user/keybindings.json"
 echo "ln -s $CURDIR/vscode/settings.json ~/.config/Code/user/settings.json"
