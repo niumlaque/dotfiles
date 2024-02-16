@@ -53,7 +53,7 @@ echo "sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/key
 echo "sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'"
 echo "rm -f packages.microsoft.gpg"
 echo "$CURDIR/vscode/install_vscode_extensions.sh"
-echo "ln -s $CURDIR/vscode/keybindings.json ~/.config/Code/user/keybindings.json"
-echo "ln -s $CURDIR/vscode/settings.json ~/.config/Code/user/settings.json"
+echo "ln -s $CURDIR/vscode/keybindings.json ~/.config/Code/User/keybindings.json"
+echo "ln -s $CURDIR/vscode/settings.json ~/.config/Code/User/settings.json"
 echo "<<==================================================================="
 
