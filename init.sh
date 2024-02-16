@@ -42,7 +42,8 @@ curl https://get.volta.sh | bash
 
 echo "===================================================================>>"
 echo "Get font from https://github.com/yuru7/HackGen/releases"
-echo "unzip HackGen_NF_v*.*.*.zip && mv HackGen_NV_v*.*.* /usr/share/fonts/HackGenNerd"
+echo "wget https://github.com/yuru7/HackGen/releases/download/v2.9.0/HackGen_NF_v2.9.0.zip"
+echo "unzip HackGen_NF_v2.9.0.zip && sudo mv HackGen_NF_v2.9.0 /usr/share/fonts/HackGenNerd"
 echo "goenv install -l && goenv install <VERSION> && goenv global <VERSION>"
 echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 echo "install VSCode"

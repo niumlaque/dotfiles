@@ -3,6 +3,10 @@ set -x DEFAULT_EDITOR "/usr/bin/nvim"
 set -x OSTYPE (uname -s)
 set -x XDG_CONFIG_PATH $HOME/.config
 
+if test -d ~/.cargo/bin
+    set -x PATH ~/.cargo/bin $PATH
+end
+
 if test -d ~/.goenv
     set -x GOENV_ROOT ~/.goenv
     set -x PATH $GOENV_ROOT/bin $PATH
