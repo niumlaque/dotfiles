@@ -31,6 +31,9 @@ ln -s $CURDIR/.gitconfig ~/.gitconfig
 ln -s $CURDIR/.tmux.conf ~/.tmux.conf
 ln -s $CURDIR/.dircolors ~/.dircolors
 
+mkdir -p ~/.config/terminator
+ln -s $CURDIR/terminator/config ~/.config/terminator/config
+
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 mkdir -p ~/develop
 

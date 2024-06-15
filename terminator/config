@@ -1,0 +1,17 @@
+[global_config]
+  window_state = fullscreen
+[keybindings]
+[profiles]
+  [[default]]
+    font = HackGen Console NF 12
+    scrollbar_position = hidden
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
