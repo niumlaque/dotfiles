@@ -61,5 +61,15 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.startupEditor": "none",
   "breadcrumbs.enabled": false,
-  "editor.stickyScroll.enabled": false
+  "editor.stickyScroll.enabled": false,
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "ruff.organizeImports": false
 }
