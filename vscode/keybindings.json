@@ -57,7 +57,7 @@
     {
         "key": "oem_comma oem_2",
         "command": "editor.action.commentLine",
-        "when": "editorTextFocus && vim.active && !editorReadonly && vim.mode != 'CommandlineInProgress' && vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.active && !editorReadonly && vim.mode != 'CommandlineInProgress' && vim.mode != 'Insert' && vim.mode != 'SearchInProgressMode'"
     },
     {
         "key": "ctrl+oem_2",
