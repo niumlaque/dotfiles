@@ -5,13 +5,13 @@ pkglist=(
     MS-CEINTL.vscode-language-pack-ja
     rust-lang.rust-analyzer
     vadimcn.vscode-lldb
-    bungcip.better-toml
     ritwickdey.liveserver
     golang.go
     premparihar.gotestexplorer
     bierner.markdown-preview-github-styles
     humao.rest-client
     github.github-vscode-theme
+    tamasfe.even-better-toml
 )
 
 for i in ${pkglist[@]}; do
