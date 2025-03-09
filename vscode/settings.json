@@ -71,5 +71,6 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true
   },
-  "ruff.organizeImports": false
+  "ruff.organizeImports": false,
+  "files.insertFinalNewline": true
 }
