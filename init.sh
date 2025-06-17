@@ -23,7 +23,8 @@ sudo aptitude -y install \
     neovim \
     gron \
     rust-gdb \
-    gpg
+    gpg \
+    ripgrep
 
 mkdir -p ~/.config/fish
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish
