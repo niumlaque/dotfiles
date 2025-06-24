@@ -24,7 +24,9 @@ sudo aptitude -y install \
     gron \
     rust-gdb \
     gpg \
-    ripgrep
+    ripgrep \
+    wget \
+    unzip
 
 mkdir -p ~/.config/fish
 ln -s $CURDIR/config.fish ~/.config/fish/config.fish

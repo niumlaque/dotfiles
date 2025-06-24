@@ -25,7 +25,7 @@
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "markdown-preview-github-styles.colorTheme": "light",
-  "editor.fontFamily": "'HackGen Console NFJ'",
+  "editor.fontFamily": "'HackGen Console NF'",
   "workbench.colorTheme": "GitHub Dark Default",
   "rust-analyzer.lens.run.enable": false,
   "rust-analyzer.lens.debug.enable": false,
@@ -71,5 +71,6 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true
   },
-  "ruff.organizeImports": false
+  "ruff.organizeImports": false,
+  "files.insertFinalNewline": true
 }
