@@ -60,17 +60,20 @@
   "prettier.tabWidth": 4,
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.startupEditor": "none",
-  "breadcrumbs.enabled": false,
   "editor.stickyScroll.enabled": false,
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeCheckingMode": "standard",
   "python.analysis.autoImportCompletions": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "ruff.organizeImports": false,
-  "files.insertFinalNewline": true
+  "terminal.integrated.fontFamily": "'HackGen Console NF'",
+  "debug.console.fontFamily": "'HackGen Console NF'",
+  "remote.autoForwardPortsSource": "hybrid",
+  "files.trimTrailingWhitespaceInRegexAndStrings": false,
+  "editor.experimentalEditContextEnabled": false,
 }
