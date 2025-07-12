@@ -76,4 +76,5 @@
   "remote.autoForwardPortsSource": "hybrid",
   "files.trimTrailingWhitespaceInRegexAndStrings": false,
   "editor.experimentalEditContextEnabled": false,
+  "files.insertFinalNewline": true
 }
