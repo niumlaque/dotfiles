@@ -76,5 +76,9 @@
   "remote.autoForwardPortsSource": "hybrid",
   "files.trimTrailingWhitespaceInRegexAndStrings": false,
   "editor.experimentalEditContextEnabled": false,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "terminal.integrated.suggest.enabled": false,
+  "editor.parameterHints.enabled": false
 }
