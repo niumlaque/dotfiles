@@ -1,0 +1,27 @@
+scroll_buffer_size 10000
+mouse_mode false
+default_layout "compact"
+
+keybinds {
+    normal {
+        bind "Ctrl b" { SwitchToMode "Tmux"; }
+
+        bind "Ctrl p" { GoToPreviousTab; }
+        bind "Ctrl n" { GoToNextTab; }
+    }
+
+    tmux {
+        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+
+        bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
+
+        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
+
+        // Zellij reloads config.kdl automatically.
+        bind "r" { SwitchToMode "Normal"; }
+    }
+}
