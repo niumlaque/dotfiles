@@ -7,13 +7,6 @@ if test -d ~/.cargo/bin
     set -x PATH ~/.cargo/bin $PATH
 end
 
-if test -d ~/.goenv
-    set -x GOENV_ROOT ~/.goenv
-    set -x PATH $GOENV_ROOT/bin $PATH
-    eval (goenv init -|source)
-    set -x PATH $GOPATH/bin $PATH
-end
-
 # ローカルファイル取り込み
 if test -e ~/.config/fish/config.local.fish
     source ~/.config/fish/config.local.fish
@@ -64,17 +57,6 @@ function recentdir
     end
 end
 
-function gcd
-    ghq list | peco | read -l target
-    if [ -z != $target ]
-        cd (ghq root)/$target
-    end
-end
-
-function nvm
-    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-end
-
 # alias
 switch $OSTYPE
 case "Linux"
@@ -100,19 +82,11 @@ alias du "du -h"
 alias df "df -h"
 alias su "su -l"
 alias remake "make clean;make"
-alias dvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolution=high --show-reachable=yes 2>&1"
-alias dcvalgrind "valgrind -v --error-limit=no --leak-check=full --leak-resolution=high --show-reachable=yes --trace-children=yes 2>&1"
-alias today "date +'%Y%m%d'"
-alias vcp "rsync -av --progress"
 if test -e $DEFAULT_EDITOR
     alias vi $DEFAULT_EDITOR
 end
 if command --search peco >/dev/null
     alias peco "peco --layout=bottom-up"
-end
-if command --search curl >/dev/null
-    alias corona "curl -s https://corona-stats.online"
-    alias coronaj "curl -s https://corona-stats.online/Japan"
 end
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
